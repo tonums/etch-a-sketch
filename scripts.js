@@ -35,20 +35,19 @@ rangeInput.addEventListener('click', ()=>{
     resetGrid();
     console.log(+rangeInput.value);
     initGrid(+rangeInput.value);
-    initEventListeners;
 });
+
 button.addEventListener('click', ()=>{
-    
         resetGrid();
         initGrid(rangeInput.value);
-        initEventListeners();
 }); 
 
 function initEventListeners(){
 divs = document.querySelectorAll('.square');
+const color= document.querySelector('#myColor');
 divs.forEach((div) =>{
     div.addEventListener('mouseover', ()=>{
-            div.style.background = "black";
+            div.style.background = color.value;
             div.classList.add("hovered");
     });
 });

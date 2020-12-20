@@ -17,6 +17,16 @@ h1{
     margin-top: 10%;;
     display: flex;
 }
+#myRange, #myColor{
+    margin-bottom: 2em;;
+}
+#myColor{
+    border-radius: 50%;
+    width: 25px;
+    height:25px;
+    border: none;
+    background: none;
+}
 .container{
     background: white;
     margin: auto;
