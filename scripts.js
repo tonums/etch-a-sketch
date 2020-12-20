@@ -2,9 +2,12 @@ const container = document.querySelector('.container');
 container.style.display = "grid";
 const button = document.createElement('button');
 button.textContent="Reset";
+const buttonGrid = document.createElement('button');
+buttonGrid.textContent="Toggle Grid";
 const div = document.querySelector('.buttonContainer');
 const rangeInput = document.querySelector('.slider');
 let divs;
+div.appendChild(buttonGrid);
 div.appendChild(button);
 initGrid(19);
 
@@ -40,6 +43,15 @@ rangeInput.addEventListener('click', ()=>{
 button.addEventListener('click', ()=>{
         resetGrid();
         initGrid(rangeInput.value);
+}); 
+
+buttonGrid.addEventListener('click', ()=>{
+    divs = document.querySelectorAll('.square');
+    divs.forEach((div) =>{
+    
+    div.classList.toggle("hasBorder");
+  
+});
 }); 
 
 function initEventListeners(){
