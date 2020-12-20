@@ -1,0 +1,26 @@
+html{
+    height: 100%;
+}
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    height: 100%;
+}
+h1{
+    text-align: center;
+    margin: auto;
+}
+.container{
+    background: white;
+    margin: auto;
+    width: 500px;
+    height: 500px;
+    border: black 10px solid;
+}
+.buttonContainer{
+    text-align: center;
+}
+button{
+    padding:10px;
+    margin: 10px;
+}
