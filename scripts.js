@@ -2,11 +2,12 @@ const container = document.querySelector('.container');
 container.style.display = "grid";
 const button = document.createElement('button');
 button.textContent="Reset";
-const div = document.querySelector('.buttonContainer')
+const div = document.querySelector('.buttonContainer');
+const rangeInput = document.querySelector('.slider');
+let divs;
 div.appendChild(button);
 initGrid(19);
-let divs;
-initEventListeners();
+
 
 function initGrid(squaresPerSide){
     let div;
@@ -21,6 +22,7 @@ function initGrid(squaresPerSide){
         div.classList.toggle('square');
         container.appendChild(div);
     }
+    initEventListeners();
 }
 
 function resetGrid(){   
@@ -29,16 +31,17 @@ function resetGrid(){
         div.remove();
     });
 }
-
+rangeInput.addEventListener('click', ()=>{
+    resetGrid();
+    console.log(+rangeInput.value);
+    initGrid(+rangeInput.value);
+    initEventListeners;
+});
 button.addEventListener('click', ()=>{
-    let number = prompt("How many Squares per side? (1-100)", "");
-    if(number <=100 && number >0){
+    
         resetGrid();
-        initGrid(number);
+        initGrid(rangeInput.value);
         initEventListeners();
-    }else{
-        alert("Enter a number between 1 and 100");
-    }
 }); 
 
 function initEventListeners(){
