@@ -11,17 +11,20 @@ header{
 }
 h1{
     text-align: center;
+    width: 50%;
+    background: hsla(174, 23%, 0%, 0.31);
+    border-radius: 5px;
     margin: auto;
 }
 .content{
     margin-top: 10%;;
     display: flex;
+    justify-content: center;
 }
 #myRange, #myColor{
     margin-bottom: 2em;;
 }
 #myColor{
-    border-radius: 50%;
     width: 25px;
     height:25px;
     border: none;
@@ -29,13 +32,15 @@ h1{
 }
 .container{
     background: white;
-    margin: auto;
     width: 500px;
     height: 500px;
     border: black 10px solid;
 }
 .buttonContainer{
-    padding-left: 40px;;
+    color: white;
+    background: hsla(174, 23%, 0%, 0.31);
+    border-radius: 5px;
+    padding: 20px;;
     text-align: center;
 }
 button{
